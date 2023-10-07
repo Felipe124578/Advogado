@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-family: 'Imbue', serif;
+}
+html {
+    background-color: black;
+}
+/*------nav---------*/
+
+.navbar a {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Imbue', serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    color: red;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 1s;
+}
+.offcanvas{
+    background: black;
+}
+
+.offcanvas-header h5 {
+    font-style: italic;
+    font-size: 35px;
+    font-family: 'Imbue', serif;
+}
+
+.active a{
+    color: red;
+}
+
+
+
+/*-------content-----*/
+
+#icons i {
+    font-size: 40px;
+    padding: 6px;
+    color:  rgb(100, 10, 10);
+}
+
+#icons i:hover {
+    color: white;
+    transition: 1s;
+}
+
+#cap {
+    background: url(img/photo.jpeg) no-repeat;
+    background-size: 100%;
+    height: 250px;
+    color: black;
+}
+
+#cap1 {
+    background: url(img/cap.png) no-repeat;
+    background-size: 100%;
+    height: 250px;
+    color: black;
+}
+
+#text, #text1 {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Imbue', serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#about {
+    font-family: 'Imbue', serif;
+    color: white;
+    font-style: italic;
+    text-align: justify;
+}
+
+#about h4, 
+#title h4, 
+#different h4,
+#contact h4 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(190, 26, 26, 0.704);
+}
+#post {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    font-size: 14px;
+    font-style: italic;
+    background-color: rgb(100, 10, 10);
+}
+#roda i {
+    margin: 5px;
+    margin-top: 30px;
+    font-size: 30px;
+    color: black;
+}
+#roda i:hover {
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+.card{
+    position: relative;
+}
+.card i{
+    color: rgba(100, 10, 10, 0.941);
+    padding-bottom: 0;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+#different a{
+    color: rgb(184, 22, 22);
+    text-decoration: none;
+}
+
+#different a:hover {
+    text-decoration: underline white;
+    transition: 0.6s;
+}
+
+#btn-inst {
+    background-color: purple;
+}
+
+/*------animation---------*/
+
+#hover {
+    animation: animation1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    transition: 2s;
+}
+
+#after {
+    animation: animation2;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    transition: 3;
+}
+
+.card:hover {
+    animation: animation;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+    transition: 0.2s;
+}
+
+
+[data-anime]{
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-anime="top"]{
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="bottom"]{
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"]{
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+@keyframes animation {
+    from {
+
+    }
+    to {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+
+@keyframes animation1 {
+    from {
+
+    }
+
+    to {
+        width: 0.1px;
+        opacity: 0;
+    }
+}
+
+@keyframes animation2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*-------media--------*/
+
+@media (min-width: 240px) and (max-width: 390px) {
+    #text {
+        font-size: 15px;
+    }
+    #text h3{
+        font-size: 20px;
+    }
+    #post {
+        display: none;
+    }
+}
+
+
+@media (min-width: 240px) and (max-width: 1200px){
+    #contact form{
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 3000px) {
+    #hover img{
+        width: 50%;
+        margin: auto;
+    }
+    #top #one {
+        height: 400px;
+    }
+    #cap {
+        height: 500px;
+        background-attachment: fixed;
+        background-position-y: 100px;
+    }
+    #cap1 {
+        height: 400px;
+        background-attachment: fixed;
+        background-position-y: 70px;
+    }
+    #text {
+        margin-top: 200px;
+        font-size: 30px;
+    }
+
+    #text1 {
+        margin-top: 100px;
+        font-size: 30px;
+    }
+
+    #text h3, #text1 h3 {
+        font-size: 45px;
+    }
+    #about {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+    footer p {
+        padding-top: 20px;
+    }
+    #roda i{
+        font-size: 50px;
+        padding-bottom: 25px;
+    }
+    #reaction img {
+        width: 320px;
+    }
+    #different {
+        font-size: 22px;
+    }
+    #different h4 {
+        font-size: 30px;
+    }
+    #btn-menu {
+        display: none;
+    }
+}
